@@ -1,0 +1,4 @@
+{{ Filter | json}}
+<dynamic *ngFor="let queryDynamic of dynamic.queryDynamics" [dynamic]="queryDynamic"
+    style="margin-left:auto;margin-right:auto;text-align: center;margin-top:20px;display: block"
+    (valueChange)="handleVauleChange($event)"></dynamic>

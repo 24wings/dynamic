@@ -1,9 +1,12 @@
 import { EventEmitter } from "@angular/core";
+import { Dynamic } from "../struct/IDynamic";
 
 export abstract class BasicComspce<T>
 // implements IFieldIO, IValueIO<T>, IValidateAblity, ITransformAblity<T> 
 {
+  dynamic: Dynamic;
   value: T
+  valueChange: EventEmitter<any>;
   // field: Field;
   // __value__;
   // __field__;

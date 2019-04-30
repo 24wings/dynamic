@@ -1,0 +1,13 @@
+<div class="select-option-component-box" style="    padding-top: 29px;background: #fff;">
+    <div class="select-option-component-box-muen">
+        <dynamic [dynamic]="dynamic.mainQueryDynamic" (valueChange)="log($event)"
+            style="display:block;text-align: center;"></dynamic>
+        <dynamic [dynamic]="dynamic.mainDynamic" *ngIf="dynamic.mainDynamic"></dynamic>
+    </div>
+    <div class="select-option-component-box-table">
+        <dynamic [dynamic]="dynamic.subDynamic" *ngIf="dynamic.subDynamic"></dynamic>
+    </div>
+</div>
+<!-- <div> -->
+
+<!-- </div> -->

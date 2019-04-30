@@ -1,0 +1,9 @@
+.no-border{
+    
+}
+
+:host /deep/ .no-border>.ant-select-selection.ant-select-selection--single{
+    border: none;
+    border-bottom: 1px dotted #EDEDED;
+    
+} 
