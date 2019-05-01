@@ -19,6 +19,7 @@ import { ZorroQuerySelectComponent } from "./dynamic/query/zorro-query-select/zo
 import { ZorroViewQueryComponent } from "./dynamic/view/zorro-view-query/zorro-view-query.component";
 import { ZorroQueryInputComponent } from "./dynamic/query/zorro-query-input/zorro-query-input.component";
 import { PageComponent } from "./pages/page/page.component";
+import { ZorroViewTreeInfoComponent } from "./dynamic/view/zorro-view-tree-info/zorro-view-tree-info.component";
 
 const THIRDMODULES = [
     NgZorroAntdModule,
@@ -38,6 +39,7 @@ const COMPONENTS = [
     ZorroViewTableComponent,
     ZorroViewMenuComponent,
     ZorroViewQueryComponent,
+    ZorroViewTreeInfoComponent,
 
     //query
     ZorroQuerySelectComponent,

@@ -6,6 +6,7 @@ import { ZorroViewMenuComponent } from './dynamic/view/zorro-view-menu/zorro-vie
 import { ZorroQuerySelectComponent } from './dynamic/query/zorro-query-select/zorro-query-select.component';
 import { ZorroViewQueryComponent } from './dynamic/view/zorro-view-query/zorro-view-query.component';
 import { ZorroQueryInputComponent } from './dynamic/query/zorro-query-input/zorro-query-input.component';
+import { ZorroViewTreeInfoComponent } from './dynamic/view/zorro-view-tree-info/zorro-view-tree-info.component';
 
 export enum DynamicAlias {
   //page
@@ -21,7 +22,8 @@ export enum DynamicAlias {
 
   //query
   ZorroQuerySelect = "zorro-query-select",
-  ZorroQueryInput = "zorro-query-input"
+  ZorroQueryInput = "zorro-query-input",
+  ZorroViewTreeInfo = "zorro-view-tree-info"
 
 
 
@@ -42,6 +44,7 @@ export let dynamicRegister = {
   //query
   "zorro-query-select": ZorroQuerySelectComponent,
   "zorro-query-input": ZorroQueryInputComponent,
+  "zorro-view-tree-info": ZorroViewTreeInfoComponent
 
 
 }
