@@ -7,5 +7,5 @@ import { BasicComspce } from 'app/libs/dynamic/base/spec/base.spec';
   // encapsulation: ViewEncapsulation.Native
 })
 export class ZorroColStringComponent extends BasicComspce<string>{
-  @Input() value;
+  @Input() value = '';
 }     

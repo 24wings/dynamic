@@ -14,7 +14,7 @@ export class ZorroQuerySelectComponent {
   @Output() valueChange = new EventEmitter();
   @Input() dataSource: DataSource;
   Filter: Filter[] = [];
-  options: [];
+  options: any[];
   @Input() config;
   onValueChange($event) {
     this.value = $event;
@@ -23,7 +23,7 @@ export class ZorroQuerySelectComponent {
   }
   async ngOnInit() {
     if (this.dataSource) {
-      this.options = await this.dataSource.load();
+      this.options = await this.dataSource.store().load();
       console.log(this.options);
     }
   }

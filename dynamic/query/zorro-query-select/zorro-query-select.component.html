@@ -1,6 +1,6 @@
 <nz-select style="width: 120px;" [ngModel]="value" class="no-border" nzAllowClear nzShowSearch style="width:200px"
     [nzPlaceHolder]="dynamic.label" (ngModelChange)="onValueChange($event)">
-    <nz-option [nzValue]="config.valueExpr?option[config.valueExpr]: option" [nzLabel]="config.displayExpr?option[config.displayExpr]:option " *ngFor="let option of options"></nz-option>
-    <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
-    <nz-option nzValue="disabled" nzLabel="Disabled" nzDisabled></nz-option>
+    <nz-option [nzValue]="config.valueExpr?option[config.valueExpr]: option"
+        [nzLabel]="config.displayExpr?option[config.displayExpr]:option " *ngFor="let option of options"></nz-option>
+
 </nz-select>

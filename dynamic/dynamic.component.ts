@@ -28,7 +28,7 @@ export class DynamicComponent {
 
   //组件引用
   public componentRef: ComponentRef<BasicComspce<any>>;
-  constructor(public componentFactoryResolver: ComponentFactoryResolver) {}
+  constructor(public componentFactoryResolver: ComponentFactoryResolver) { }
   loadComponent() {
     this.alias = this.alias || this.dynamic.alias;
     var exsit = Object.keys(dynamicRegister).find(key => key == this.alias);
@@ -41,6 +41,7 @@ export class DynamicComponent {
       viewContainerRef.clear();
       this.componentRef = viewContainerRef.createComponent(componentFactory) as any;
       this.componentRef.instance.value = this.value;
+      debugger;
       this.componentRef.instance.dynamic = this.dynamic;
       if (this.componentRef.instance.valueChange)
         this.componentRef.instance.valueChange!.subscribe(rtn => this.valueChange.emit(rtn));
@@ -54,6 +55,8 @@ export class DynamicComponent {
     }
   }
   ngAfterViewInit() {
+    this;
+    debugger;
     this.loadComponent();
   }
 }

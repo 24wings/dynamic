@@ -22,6 +22,7 @@ import { PageComponent } from './pages/page/page.component';
 import { ZorroViewTreeInfoComponent } from './dynamic/view/zorro-view-tree-info/zorro-view-tree-info.component';
 import { ZorroViewEditorComponent } from './dynamic/view/zorro-view-editor/zorro-view-editor.component';
 import { ZorroViewInfoComponent } from './dynamic/view/zorro-view-info/zorro-view-info.component';
+import { ZorroFieldStringComponent } from './dynamic/field/zorro-field-string/zorro-field-string.component';
 
 const THIRDMODULES = [NgZorroAntdModule, CountdownModule];
 const COMPONENTS = [
@@ -40,6 +41,8 @@ const COMPONENTS = [
   ZorroViewTreeInfoComponent,
   ZorroViewEditorComponent,
   ZorroViewInfoComponent,
+  // field
+  ZorroFieldStringComponent,
 
   //query
   ZorroQuerySelectComponent,
@@ -83,4 +86,4 @@ const DIRECTIVES = [DynamicDirective];
   ],
   entryComponents: [...COMPONENTS],
 })
-export class DynamicModule {}
+export class DynamicModule { }

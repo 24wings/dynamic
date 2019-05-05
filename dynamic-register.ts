@@ -9,6 +9,7 @@ import { ZorroQueryInputComponent } from './dynamic/query/zorro-query-input/zorr
 import { ZorroViewTreeInfoComponent } from './dynamic/view/zorro-view-tree-info/zorro-view-tree-info.component';
 import { ZorroViewEditorComponent } from './dynamic/view/zorro-view-editor/zorro-view-editor.component';
 import { ZorroViewInfoComponent } from './dynamic/view/zorro-view-info/zorro-view-info.component';
+import { ZorroFieldStringComponent } from './dynamic/field/zorro-field-string/zorro-field-string.component';
 
 export enum DynamicAlias {
   //page
@@ -18,7 +19,6 @@ export enum DynamicAlias {
   ZorroViewTable = 'zorro-view-table',
   ZorroViewMenu = 'zorro-view-menu',
   ZorroViewTree = 'zorro-view-tree',
-  ZorroViewInfo = 'zorro-view-info',
 
   //col
   ZorroStringCol = 'zorro-col-string',
@@ -28,6 +28,8 @@ export enum DynamicAlias {
   ZorroQueryInput = 'zorro-query-input',
   ZorroViewTreeInfo = 'zorro-view-tree-info',
   ZorroViewEditor = 'zorro-view-editor',
+  ZorroFieldString = "zorro-field-string",
+  ZorroViewInfo = "zorro-view-info"
 }
 
 export let dynamicRegister = {
@@ -45,5 +47,6 @@ export let dynamicRegister = {
   'zorro-query-input': ZorroQueryInputComponent,
   'zorro-view-tree-info': ZorroViewTreeInfoComponent,
   'zorro-view-editor': ZorroViewEditorComponent,
-  'zorro-viewInfo': ZorroViewInfoComponent,
+  'zorro-view-info': ZorroViewInfoComponent,
+  "zorro-field-string": ZorroFieldStringComponent
 };

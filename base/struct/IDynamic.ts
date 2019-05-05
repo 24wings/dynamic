@@ -13,16 +13,23 @@ export class QueryDynamic extends Dynamic {
   dataSource?: DataSource;
 }
 
+export class DynamicField extends Dynamic {
+  dataField: string;
+  label: string;
+  disabled?: boolean;
+
+}
+
 export class QueryViewDynamic extends Dynamic {
   queryDynamics: QueryDynamic[] = [];
 }
-export class ViewDynamic extends Dynamic {}
+export class ViewDynamic extends Dynamic { }
 
 export class TreeViewDynamic extends ViewDynamic {
   loadUrl: string;
 }
 
-export class TableViewDynamic extends Dynamic {}
+export class TableViewDynamic extends Dynamic { }
 
 export class SubQueryPageDynamic extends Dynamic {
   mainQueryDynamic: QueryViewDynamic;

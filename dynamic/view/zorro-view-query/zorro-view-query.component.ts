@@ -16,7 +16,7 @@ export class ZorroViewQueryComponent {
   Filter: Filter[] = [];
   @Output() valueChange = new EventEmitter();
   @Input() dataSource: DataSource;
-  ngOnInt() {}
+  ngOnInt() { }
 
   async handleVauleChange($event: Filter[] = []) {
     console.log($event);
@@ -51,6 +51,8 @@ export class ZorroViewQueryComponent {
   }
   async ngOnInit() {
     this.dataSource = this.dataSource || this.dynamic.dataSource;
+    var data = await this.dataSource.store().load();
+    this.valueChange.emit(data);
     //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
     //Add 'implements OnInit' to the class.
     // var data = await this.dataSource.load();
