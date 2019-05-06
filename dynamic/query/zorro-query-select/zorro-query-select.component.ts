@@ -15,7 +15,7 @@ export class ZorroQuerySelectComponent {
   @Input() dataSource: DataSource;
   Filter: Filter[] = [];
   options: any[];
-  @Input() config;
+  @Input() config: any = {};
   onValueChange($event) {
     this.value = $event;
     this.dynamic.filter.forEach(f => (f.value = this.value));

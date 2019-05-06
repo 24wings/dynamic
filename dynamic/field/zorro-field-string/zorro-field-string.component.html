@@ -1,7 +1,7 @@
 <div class="compile-left">
     <div class="compile-left-box">
         <label for="">{{dynamic.label}}:</label>
-        <input nz-input [placeholder]="dynamic.label" [disabled]="dynamic.disabled"
-            [(ngModel)]="value[dynamic.dataField]" (change)="doValueChange()">
+        <input nz-input [placeholder]="dynamic.label" [disabled]="dynamic.disabled" [(ngModel)]="_value_"
+            (change)="doValueChange()">
     </div>
 </div>

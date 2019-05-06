@@ -13,8 +13,9 @@ export class ZorroViewEditorComponent {
     @Input() value: any
     @Output() valueChange = new EventEmitter();
 
-    doValueChange() {
-        // this.valueChange.emit(this.value);
+    doValueChange($event: { value, dataField }) {
+        this.value[$event.dataField] = $event.value;
+        this.valueChange.emit(this.value);
     }
     getValue(opt: { value: any, dataField }) {
         return this.value[opt.dataField] = opt.value[opt.dataField];

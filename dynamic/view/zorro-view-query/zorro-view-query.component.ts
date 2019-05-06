@@ -50,12 +50,12 @@ export class ZorroViewQueryComponent {
     this.valueChange.emit(data);
   }
   async ngOnInit() {
+    this.loadData();
+  }
+
+  async loadData() {
     this.dataSource = this.dataSource || this.dynamic.dataSource;
     var data = await this.dataSource.store().load();
     this.valueChange.emit(data);
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    // var data = await this.dataSource.load();
-    // console.log(data);
   }
 }

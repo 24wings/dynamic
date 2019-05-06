@@ -4,7 +4,7 @@
     <!-- <p *ngFor="let d of fields">{{d.dataField}}:{{value[d.dataField]}}</p> -->
     <ng-container *ngFor="let d of fields;">
         <!-- <p>{{d.dataField}}:{{value[d.dataField]}}</p> -->
-        <ng-container *ngIf="value[d.dataField]">
+        <ng-container>
             <dynamic class="compile-left" [value]="value" [dynamic]="d" (valueChange)="doValueChange($event)">
             </dynamic>
         </ng-container>

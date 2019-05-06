@@ -8,7 +8,11 @@ class SimpleTree {
 }
 export function list2Tree<T extends SimpleTree>(data, keyExpr, parentIdExpr, displayExpr) {
   let treeMenus: SimpleTree[] = [];
+  console.log(data);
+  data.forEach(opt => (opt[parentIdExpr] == null || opt[parentIdExpr] == undefined) ? opt[parentIdExpr] = 0 : '');
+  console.log(data);
   function getChildren<T>(topItem: SimpleTree, options: SimpleTree[]): SimpleTree[] {
+
     let children = options.filter(menu => menu[parentIdExpr] == topItem[keyExpr]);
     for (let submenu of children) {
       submenu.key = submenu[keyExpr];
@@ -20,7 +24,7 @@ export function list2Tree<T extends SimpleTree>(data, keyExpr, parentIdExpr, dis
   /**
    * 所有菜单上级不存在当前菜单列表中的都为顶级菜单
    */
-  let topMenus = data.filter(menu => !data.find(item => menu[parentIdExpr] == item[keyExpr]));
+  let topMenus = data.filter(menu => !data.find(item => menu[parentIdExpr] == item[keyExpr]) || menu[parentIdExpr] == 0);
   topMenus.forEach(m => {
     m.key = m[keyExpr];
     m.title = m[displayExpr];

@@ -1,1 +1,2 @@
-<input nz-input [placeholder]="dynamic.label" style="width:200px" [(ngModel)]="value" (change)="onChange($event)" />
+<input nz-input [style.border]="dynamic.config.border" [placeholder]="dynamic.label" style="width:200px"
+    [(ngModel)]="value" (change)="onChange($event)" />

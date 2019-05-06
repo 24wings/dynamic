@@ -12,7 +12,12 @@ export class ZorroFieldStringComponent {
     @Input() value: any;
     @Input() dynamic: DynamicField
     @Output() valueChange = new EventEmitter();
+    _value_
     doValueChange($event) {
-        this.valueChange.emit({ value: this.value, dataField: this.dynamic.dataField });
+        this.valueChange.emit({ value: this._value_, dataField: this.dynamic.dataField });
+    }
+    ngOnInit() {
+        this._value_ = this.value[this.dynamic.dataField];
+        debugger;
     }
 }
