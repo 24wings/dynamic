@@ -1,0 +1,43 @@
+<div class="select-option-component-box" style="min-height: 700px">
+  <zorro-tree-view [displayExpr]="dynamic.displayExpr" (onClick)="doClick($event)" [value]="value"
+    [parentIdExpr]="dynamic.parentIdExpr" [keyExpr]="dynamic.keyExpr"></zorro-tree-view>
+  <div class="select-option-component-box-table">
+    <div style="    text-align: right;margin-top: 20px;">
+      <!-- <thead> -->
+      <!-- <tr> -->
+      <!-- <th nzWidth="10%"></th> -->
+      <!-- <th nzWidth="35%"></th> -->
+      <!-- <th nzWidth="15%"> -->
+
+      <!-- </th> -->
+      <!-- <th nzWidth="40%"> -->
+      <button nz-button nzType="default" (click)="showModal()"><i nz-icon type="plus" theme="outline"></i>新增同级</button>
+      <button nz-button nzType="default" (click)="showNewBottomModal()"><i nz-icon type="plus-circle"
+          theme="outline"></i>新增下级</button>
+      <button nz-button nzType="default" (click)="showEditModal()"><i nz-icon type="edit"
+          theme="outline"></i>编辑</button>
+      <button nz-button nzType="default" (click)="deleteConfirm()"><i nz-icon type="minus"
+          theme="outline"></i>删除</button>
+      <!-- </th> -->
+      <!-- </tr> -->
+      <!-- </thead> -->
+    </div>
+    <zorro-view-table [value]="selectedData" [cols]="dynamic.cols"></zorro-view-table>
+  </div>
+
+</div>
+
+
+<nz-modal nzWidth="865px" [(nzVisible)]="isVisible" nzTitle="新增选择项" (nzOnCancel)="handleCancel()"
+  (nzOnOk)="createTreeParam()">
+  <zorro-view-editor [fields]="dynamic.fields" [(value)]="newTreeParam"></zorro-view-editor>
+</nz-modal>
+<nz-modal nzWidth="865px" [(nzVisible)]="bottomModalVisible" nzTitle="新增下级选择项" (nzOnCancel)="handleCancel()"
+  *ngIf="bottomModalVisible" (nzOnOk)="createChild()">
+  <zorro-view-editor [fields]="dynamic.fields" [(value)]="newChildTreeParam"></zorro-view-editor>
+</nz-modal>
+
+<nz-modal nzWidth="865px" [(nzVisible)]="editModalVisible" nzTitle="编辑" (nzOnCancel)="handleCancel()"
+  *ngIf="editModalVisible" (nzOnOk)="updateTreeParam()">
+  <zorro-view-editor [fields]="dynamic.fields" [value]="selectedData"></zorro-view-editor>
+</nz-modal>

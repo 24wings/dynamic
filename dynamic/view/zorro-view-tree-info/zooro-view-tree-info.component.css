@@ -1,0 +1,39 @@
+
+.select-option-component-box {
+  margin: 8px;
+  /* float: left;
+  width: 100%; */
+}
+
+.select-option-component-box-muen {
+  width: 240px;
+}
+
+.select-option-component-box {
+  overflow: hidden;
+  display: flex;
+}
+
+.select-option-component-box-muen {
+  /* float: left; */
+}
+
+.select-option-component-box-table {
+  width: -moz-calc(100% - 230px);
+  width: -webkit-calc(100% - 230px);
+  width: calc(100% - 230px);
+  background: #fff;
+  margin-left: 20px;
+}
+
+.select-option-component-box-muen {
+  background: #fff;
+}
+
+.select-option-component-box-table {
+  width: -moz-calc(100% - 230px);
+  width: -webkit-calc(100% - 230px);
+  width: calc(100% - 230px);
+  background: #fff;
+  margin-left: 20px;
+}

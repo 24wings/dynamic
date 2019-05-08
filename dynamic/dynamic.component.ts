@@ -9,9 +9,11 @@ import {
   EventEmitter,
 } from '@angular/core';
 import { DynamicDirective } from '../dynamic-directive';
-import { dynamicRegister } from '../dynamic-register';
 import { BasicComspce } from '../base/spec/base.spec';
 import { Dynamic } from '../base/struct/IDynamic';
+import { ActivatedRoute } from '@angular/router';
+import { DynamicAlias } from '../dynamic-register';
+import { dynamicRegister } from '../dynamic-register-componen';
 
 @Component({
   selector: 'dynamic',
@@ -28,7 +30,17 @@ export class DynamicComponent {
 
   //组件引用
   public componentRef: ComponentRef<BasicComspce<any>>;
-  constructor(public componentFactoryResolver: ComponentFactoryResolver) { }
+  constructor(public componentFactoryResolver: ComponentFactoryResolver, private route: ActivatedRoute) {
+    var data = this.route.snapshot.data;
+    if (data.dynamic) {
+      this.dynamic = data.dynamic;
+
+    }
+    if (data.value) {
+      this.value = data.value;
+    }
+    debugger;
+  }
   loadComponent() {
     this.alias = this.alias || this.dynamic.alias;
     var exsit = Object.keys(dynamicRegister).find(key => key == this.alias);
@@ -55,8 +67,6 @@ export class DynamicComponent {
     }
   }
   ngAfterViewInit() {
-    this;
-    debugger;
     this.loadComponent();
   }
 }

@@ -23,6 +23,7 @@ import { ZorroViewTreeInfoComponent } from './dynamic/view/zorro-view-tree-info/
 import { ZorroViewEditorComponent } from './dynamic/view/zorro-view-editor/zorro-view-editor.component';
 import { ZorroViewInfoComponent } from './dynamic/view/zorro-view-info/zorro-view-info.component';
 import { ZorroFieldStringComponent } from './dynamic/field/zorro-field-string/zorro-field-string.component';
+import { TreeTableViewComponent } from './dynamic/view-set/tree-table-view/tree-table-view.component';
 
 const THIRDMODULES = [NgZorroAntdModule, CountdownModule];
 const COMPONENTS = [
@@ -41,6 +42,7 @@ const COMPONENTS = [
   ZorroViewTreeInfoComponent,
   ZorroViewEditorComponent,
   ZorroViewInfoComponent,
+  TreeTableViewComponent,
   // field
   ZorroFieldStringComponent,
 

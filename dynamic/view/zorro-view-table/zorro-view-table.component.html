@@ -1,1 +1,12 @@
-view-table
+<ng-container *ngIf="value">
+  <ng-container *ngFor="let group of loopGroup;let i=index">
+    <div>
+      <div style="background: #fafafa">{{cols[i].config.label}}</div>
+      <div>{{ value[cols[i].config.dataField]}}</div>
+      <ng-container *ngIf="cols[i+1]">
+        <div>{{cols[i+1].config.label}}</div>
+        <div>{{ value[cols[i].config.dataField]}}</div>
+      </ng-container>
+    </div>
+  </ng-container>
+</ng-container>
